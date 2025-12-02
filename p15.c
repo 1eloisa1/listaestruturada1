@@ -1,20 +1,30 @@
-/*Dividindo X por Y: leia um número inteiro N representando a quantidade de
+/* Dividindo X por Y: leia um número inteiro N representando a quantidade de
 pares a serem processados. Para cada par X, Y imprima o resultado de X/Y, ou a
 mensagem: divisao impossível quando Y for igual a zero.*/
-
 #include <stdio.h>
 
 int main() {
-    int N, i, Y, X, divisao; 
+    float divisao, X, Y;
+    int N, i;
 
-    printf("Digite a segundo numero: ");
+    printf("Quantos pares quer ler: ");
     scanf("%i", &N);
 
-    for (i = 0; i < N; i++) {
-        if (i%2==0){ 
-            soma += i;
+     for (i = 0; i < N; i++) {
+
+        printf("Dividendo: ");
+        scanf("%f", &X);
+
+        printf("Divisor: ");
+        scanf("%f", &Y);
+
+        if (Y!=0){
+            divisao = X/Y;
+            printf("Divisao =  %.1f / %.1f = %.2f\n", X, Y, divisao);
+        }
+        else{
+            printf("Divisao impossível");
         }
     }
-    printf("A soma é %i\n", soma);
     return 0;
 }

@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main() {
-    int M, N, i, soma;
+    int M, N, i, soma, troca;
      
     printf("Digite a primeiro numero: ");
     scanf("%i", &M); 
@@ -14,6 +14,12 @@ int main() {
     while (N > 0 && M > 0){
 
         soma = 0;
+
+        if (M > N) {
+            troca = M;
+            M = N;
+            N = troca;
+        }
 
         for (i = M; i < N+1; i++) {
             printf("%i\n", i);
