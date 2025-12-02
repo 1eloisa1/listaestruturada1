@@ -14,7 +14,7 @@ int main() {
     while (N > 0 && M > 0){
 
         soma = 0;
-
+         //mudar as posições caso n maior que m
         for (i = M; i < N+1; i++) {
             printf("%i\n", i);
             soma += i;
