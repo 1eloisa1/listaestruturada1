@@ -20,7 +20,6 @@ int main() {
             M = N;
             N = troca;
         }
-
         for (i = M; i < N+1; i++) {
             printf("%i\n", i);
             soma += i;
